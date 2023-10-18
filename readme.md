@@ -62,7 +62,7 @@ fn main() {
     println!("{:?} {:?}", comp1, comp2);
 }
 ```
-Also compiles when deref mannually: 
+Also compiles when deref manually: 
 ```rust
 fn main() {
     use tokio;
@@ -72,7 +72,7 @@ fn main() {
     let lo = &arr[1..3];
     let ivec = MYIVec::new(arr);
     let comp1 = hi.partial_cmp(lo);
-    let comp2 = hi.partial_cmp(ivec.deref()); // mannually deref working
+    let comp2 = hi.partial_cmp(ivec.deref()); // manually deref working
     println!("{:?} {:?}", comp1, comp2);
 }
 ```
