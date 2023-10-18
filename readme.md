@@ -1,4 +1,3 @@
-This code compiles when not depends `sled`: 
 ```rust
 fn main() {
     use tokio;
@@ -12,7 +11,7 @@ fn main() {
     println!("{:?} {:?}", comp1, comp2);
 }
 ```
-Not Compile when depends `sled`, with error:
+This code does not compile when `use tokio`: 
 ```bash
    Compiling report_bug v0.1.0 (/data01/home/zhuhuiming.sy/git/report_bug)
 warning: the item `tokio` is imported redundantly
@@ -49,7 +48,7 @@ warning: `report_bug` (bin "report_bug") generated 2 warnings
 error: could not compile `report_bug` (bin "report_bug") due to previous error; 2 warnings emitted
 ```
 
-Compiles when comment use tokio: 
+Compiles when comment `use tokio`: 
 ```rust
 fn main() {
     // use tokio;
